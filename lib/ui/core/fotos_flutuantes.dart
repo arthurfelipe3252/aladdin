@@ -137,14 +137,14 @@ class _AvatarCirculo extends StatelessWidget {
       height: diametro,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: BionatorTema.fundoTopo,
+        color: AladdinTema.fundoTopo,
         border: Border.all(
-          color: BionatorTema.destaque.withValues(alpha: opacidade),
+          color: AladdinTema.destaque.withValues(alpha: opacidade),
           width: 3,
         ),
         boxShadow: [
           BoxShadow(
-            color: BionatorTema.destaque.withValues(alpha: 0.3 * opacidade),
+            color: AladdinTema.destaque.withValues(alpha: 0.3 * opacidade),
             blurRadius: 14,
             spreadRadius: 1,
           ),

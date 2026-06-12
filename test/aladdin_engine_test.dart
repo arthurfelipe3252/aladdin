@@ -1,4 +1,4 @@
-// Testes da lógica pura do BIONATOR (camada domain, sem Flutter).
+// Testes da lógica pura do Aladdin (camada domain, sem Flutter).
 
 import 'dart:math';
 
@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:akinator_estudantil/data/repositories/jogo_repository.dart';
 import 'package:akinator_estudantil/data/services/dados_service.dart';
-import 'package:akinator_estudantil/domain/bionator_engine.dart';
+import 'package:akinator_estudantil/domain/aladdin_engine.dart';
 import 'package:akinator_estudantil/domain/models/resposta.dart';
 
 void main() {
@@ -14,13 +14,13 @@ void main() {
   final professores = repository.professores();
   final perguntas = repository.perguntas();
 
-  BionatorEngine novoEngine() => BionatorEngine(
+  AladdinEngine novoEngine() => AladdinEngine(
     professores: professores,
     perguntas: perguntas,
     random: Random(7),
   )..iniciar();
 
-  group('BionatorEngine', () {
+  group('AladdinEngine', () {
     test('crava cada um dos 15 professores respondendo conforme o perfil', () {
       for (final alvo in professores) {
         final engine = novoEngine();
@@ -28,16 +28,13 @@ void main() {
         while (!engine.deveChutar && seguranca < 100) {
           final pergunta = engine.proximaPergunta();
           expect(pergunta, isNotNull);
-          final resposta =
-              alvo.traco(pergunta!.id) == 1 ? Resposta.sim : Resposta.nao;
+          final resposta = alvo.traco(pergunta!.id) == 1
+              ? Resposta.sim
+              : Resposta.nao;
           engine.responder(pergunta, resposta);
           seguranca++;
         }
-        expect(
-          engine.lider.id,
-          alvo.id,
-          reason: 'Deveria cravar ${alvo.nome}',
-        );
+        expect(engine.lider.id, alvo.id, reason: 'Deveria cravar ${alvo.nome}');
         expect(
           engine.perguntasFeitas,
           greaterThanOrEqualTo(4),

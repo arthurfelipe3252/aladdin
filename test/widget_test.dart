@@ -1,4 +1,4 @@
-// Teste de fumaça da tela inicial do BIONATOR.
+// Teste de fumaça da tela inicial do Aladdin.
 
 import 'package:flutter_test/flutter_test.dart';
 
@@ -8,9 +8,9 @@ void main() {
   testWidgets('Tela inicial mostra o nome do app e o botão Começar', (
     tester,
   ) async {
-    await tester.pumpWidget(BionatorApp());
+    await tester.pumpWidget(AladdinApp());
 
-    expect(find.text('BIONATOR'), findsOneWidget);
+    expect(find.text('Aladdin'), findsOneWidget);
     expect(find.text('COMEÇAR'), findsOneWidget);
   });
 }

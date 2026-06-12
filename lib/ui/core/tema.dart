@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BionatorTema {
-  const BionatorTema._();
+class AladdinTema {
+  const AladdinTema._();
 
   static const Color fundoTopo = Color(0xFF2A1A4A);
   static const Color fundoBase = Color(0xFF120B26);

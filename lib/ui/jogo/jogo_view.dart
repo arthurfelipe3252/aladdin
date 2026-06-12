@@ -32,7 +32,7 @@ class _JogoViewState extends State<JogoView> {
       listenable: _viewModel,
       builder: (context, _) {
         final fase = _viewModel.fase;
-        return BionatorScaffold(
+        return AladdinScaffold(
           fundo: fase == FaseJogo.pergunta
               ? FotosFlutuantes(
                   professores: _viewModel.professores,

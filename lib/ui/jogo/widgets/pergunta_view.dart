@@ -30,7 +30,7 @@ class PerguntaView extends StatelessWidget {
               Text(
                 'Pergunta $numero',
                 style: const TextStyle(
-                  color: BionatorTema.destaqueClaro,
+                  color: AladdinTema.destaqueClaro,
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),

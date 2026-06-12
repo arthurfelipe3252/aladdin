@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'fundo_estrelado.dart';
 import 'tema.dart';
 
-class BionatorScaffold extends StatelessWidget {
-  const BionatorScaffold({
+class AladdinScaffold extends StatelessWidget {
+  const AladdinScaffold({
     super.key,
     required this.child,
     this.fundo,
@@ -21,7 +21,7 @@ class BionatorScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(gradient: BionatorTema.fundoGradiente),
+        decoration: const BoxDecoration(gradient: AladdinTema.fundoGradiente),
         child: Stack(
           children: [
             const Positioned.fill(child: FundoEstrelado()),

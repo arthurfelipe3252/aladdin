@@ -6,20 +6,20 @@ import 'ui/core/tema.dart';
 import 'ui/home/home_view.dart';
 
 void main() {
-  runApp(BionatorApp());
+  runApp(AladdinApp());
 }
 
-class BionatorApp extends StatelessWidget {
-  BionatorApp({super.key}) : repository = JogoRepository(DadosService());
+class AladdinApp extends StatelessWidget {
+  AladdinApp({super.key}) : repository = JogoRepository(DadosService());
 
   final JogoRepository repository;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'BIONATOR',
+      title: 'Aladdin',
       debugShowCheckedModeBanner: false,
-      theme: BionatorTema.tema(),
+      theme: AladdinTema.tema(),
       home: HomeView(repository: repository),
     );
   }

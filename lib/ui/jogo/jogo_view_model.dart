@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 import '../../data/repositories/jogo_repository.dart';
-import '../../domain/bionator_engine.dart';
+import '../../domain/aladdin_engine.dart';
 import '../../domain/models/pergunta.dart';
 import '../../domain/models/professor.dart';
 import '../../domain/models/resposta.dart';
@@ -10,7 +10,7 @@ enum FaseJogo { pergunta, pensando, resultado }
 
 class JogoViewModel extends ChangeNotifier {
   JogoViewModel(this._repository) {
-    _engine = BionatorEngine(
+    _engine = AladdinEngine(
       professores: _repository.professores(),
       perguntas: _repository.perguntas(),
     );
@@ -18,7 +18,7 @@ class JogoViewModel extends ChangeNotifier {
   }
 
   final JogoRepository _repository;
-  late final BionatorEngine _engine;
+  late final AladdinEngine _engine;
 
   FaseJogo _fase = FaseJogo.pergunta;
   Pergunta? _perguntaAtual;

@@ -13,7 +13,7 @@ class PensandoView extends StatelessWidget {
         children: [
           Text('🧞', style: TextStyle(fontSize: 80)),
           SizedBox(height: 28),
-          CircularProgressIndicator(color: BionatorTema.destaqueClaro),
+          CircularProgressIndicator(color: AladdinTema.destaqueClaro),
           SizedBox(height: 28),
           Text('Deixa eu pensar…', style: TextStyle(fontSize: 18)),
         ],

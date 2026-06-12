@@ -21,7 +21,7 @@ class ResultadoView extends StatelessWidget {
     showDialog<void>(
       context: context,
       barrierColor: Colors.black.withValues(alpha: 0.7),
-      builder: (dialogContext) => _DialogoBionator(
+      builder: (dialogContext) => _DialogoAladdin(
         titulo: 'Acertei!',
         mensagem: 'Eu sabia que era $primeiroNome!',
         acoes: [
@@ -50,7 +50,7 @@ class ResultadoView extends StatelessWidget {
     showDialog<void>(
       context: context,
       barrierColor: Colors.black.withValues(alpha: 0.7),
-      builder: (dialogContext) => _DialogoBionator(
+      builder: (dialogContext) => _DialogoAladdin(
         titulo: 'Quase!',
         mensagem: 'Não era $primeiroNome? Posso continuar de onde paramos.',
         acoes: [
@@ -91,17 +91,17 @@ class ResultadoView extends StatelessWidget {
               fontSize: 15,
               letterSpacing: 3,
               fontWeight: FontWeight.w600,
-              color: BionatorTema.destaqueClaro,
+              color: AladdinTema.destaqueClaro,
             ),
           ),
           const SizedBox(height: 22),
           Container(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: BionatorTema.destaque, width: 4),
+              border: Border.all(color: AladdinTema.destaque, width: 4),
               boxShadow: [
                 BoxShadow(
-                  color: BionatorTema.destaque.withValues(alpha: 0.5),
+                  color: AladdinTema.destaque.withValues(alpha: 0.5),
                   blurRadius: 28,
                   spreadRadius: 2,
                 ),
@@ -109,7 +109,7 @@ class ResultadoView extends StatelessWidget {
             ),
             child: CircleAvatar(
               radius: raioFoto,
-              backgroundColor: BionatorTema.fundoTopo,
+              backgroundColor: AladdinTema.fundoTopo,
               backgroundImage: AssetImage(professor.foto),
             ),
           ),
@@ -183,8 +183,8 @@ class _BotaoPalpite extends StatelessWidget {
   }
 }
 
-class _DialogoBionator extends StatelessWidget {
-  const _DialogoBionator({
+class _DialogoAladdin extends StatelessWidget {
+  const _DialogoAladdin({
     required this.titulo,
     required this.mensagem,
     required this.acoes,
@@ -207,13 +207,13 @@ class _DialogoBionator extends StatelessWidget {
             gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [BionatorTema.fundoTopo, BionatorTema.fundoBase],
+              colors: [AladdinTema.fundoTopo, AladdinTema.fundoBase],
             ),
             borderRadius: BorderRadius.circular(24),
-            border: Border.all(color: BionatorTema.destaque, width: 2),
+            border: Border.all(color: AladdinTema.destaque, width: 2),
             boxShadow: [
               BoxShadow(
-                color: BionatorTema.destaque.withValues(alpha: 0.45),
+                color: AladdinTema.destaque.withValues(alpha: 0.45),
                 blurRadius: 32,
                 spreadRadius: 2,
               ),
@@ -227,8 +227,8 @@ class _DialogoBionator extends StatelessWidget {
                 height: 76,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: BionatorTema.destaque.withValues(alpha: 0.15),
-                  border: Border.all(color: BionatorTema.destaque, width: 2),
+                  color: AladdinTema.destaque.withValues(alpha: 0.15),
+                  border: Border.all(color: AladdinTema.destaque, width: 2),
                 ),
                 child: const Center(
                   child: Text('🧞', style: TextStyle(fontSize: 38)),
@@ -241,7 +241,7 @@ class _DialogoBionator extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: BionatorTema.destaqueClaro,
+                  color: AladdinTema.destaqueClaro,
                 ),
               ),
               const SizedBox(height: 10),
@@ -293,7 +293,7 @@ class _BotaoDialogo extends StatelessWidget {
         child: FilledButton(
           onPressed: onTap,
           style: FilledButton.styleFrom(
-            backgroundColor: BionatorTema.destaque,
+            backgroundColor: AladdinTema.destaque,
             padding: const EdgeInsets.symmetric(vertical: 14),
           ),
           child: Text(

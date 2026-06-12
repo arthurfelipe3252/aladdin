@@ -18,7 +18,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BionatorScaffold(
+    return AladdinScaffold(
       child: ConteudoCentralizadoRolavel(
         padding: const EdgeInsets.all(28),
         child: Column(
@@ -27,11 +27,11 @@ class HomeView extends StatelessWidget {
             const Text('🧞', style: TextStyle(fontSize: 76)),
             const SizedBox(height: 8),
             Text(
-              'BIONATOR',
+              'Aladdin',
               style: Theme.of(context).textTheme.displaySmall?.copyWith(
                 fontWeight: FontWeight.bold,
                 letterSpacing: 4,
-                color: BionatorTema.destaqueClaro,
+                color: AladdinTema.destaqueClaro,
               ),
             ),
             const SizedBox(height: 8),
@@ -48,7 +48,7 @@ class HomeView extends StatelessWidget {
               child: FilledButton(
                 onPressed: () => _comecar(context),
                 style: FilledButton.styleFrom(
-                  backgroundColor: BionatorTema.destaque,
+                  backgroundColor: AladdinTema.destaque,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
                 child: const Text(
@@ -78,9 +78,7 @@ class _ComoJogar extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white.withValues(alpha: 0.06),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: BionatorTema.destaque.withValues(alpha: 0.35),
-        ),
+        border: Border.all(color: AladdinTema.destaque.withValues(alpha: 0.35)),
       ),
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,7 +88,7 @@ class _ComoJogar extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: BionatorTema.destaqueClaro,
+              color: AladdinTema.destaqueClaro,
             ),
           ),
           SizedBox(height: 12),
@@ -124,7 +122,7 @@ class _Passo extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 12,
-            backgroundColor: BionatorTema.destaque,
+            backgroundColor: AladdinTema.destaque,
             child: Text(
               numero,
               style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),

@@ -1,11 +1,11 @@
 {
-    "name": "BIONATOR",
-    "short_name": "BIONATOR",
+    "name": "Aladdin",
+    "short_name": "Aladdin",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#120B26",
     "theme_color": "#9C6BFF",
-    "description": "BIONATOR - jogo de adivinhacao que descobre o professor do curso",
+    "description": "Aladdin - jogo de adivinhacao que descobre o professor do curso",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

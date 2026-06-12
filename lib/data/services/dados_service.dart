@@ -177,6 +177,7 @@ class DadosService {
       'guilherme_alves',
       'leticia',
       'jeferson_vorpagel',
+      'fabiano',
     },
     'projeto_integrador': {'renato', 'willian', 'andre_dorr', 'alan'},
     'escrevem_codigo': {

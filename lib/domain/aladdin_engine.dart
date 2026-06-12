@@ -4,8 +4,8 @@ import 'models/pergunta.dart';
 import 'models/professor.dart';
 import 'models/resposta.dart';
 
-class BionatorEngine {
-  BionatorEngine({
+class AladdinEngine {
+  AladdinEngine({
     required this.professores,
     required this.perguntas,
     this.pisoPerguntas = 4,
